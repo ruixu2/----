@@ -6,11 +6,11 @@ print(data_type)
 total_str=""
 for item in data_type:
     type_str=f"## {item}  \n"
-    type_str+="|类别|名称|时间范围|空间范围|时间分辨率|空间分辨率|简介|特征码| \n"
-    type_str+="|-|-|-|-|-|-|-|-| \n"
+    type_str+="|名称|时间范围|空间范围|时间分辨率|空间分辨率|简介|特征码| \n"
+    type_str+="|-|-|-|-|-|-|-| \n"
     temp=df[df['类别']==item]
     for idx,row in temp.iterrows():
-        type_str+=f"|{item}|{row['名称']}|{row['时间范围']}|{row['空间范围']}|{row['时间分辨率']}|{row['空间分辨率']}|{row['简介']}|{row['特征码']}| \n"
+        type_str+=f"|{row['名称']}|{row['时间范围']}|{row['空间范围']}|{row['时间分辨率']}|{row['空间分辨率']}|{row['简介']}|{row['特征码']}| \n"
     total_str+=type_str
 print(total_str)
 
